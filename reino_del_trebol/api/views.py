@@ -19,7 +19,7 @@ class MageCreateView(generics.CreateAPIView):
 class MageUpdateView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Mage.objects.all()
     serializer_class = MageSerializer
-    
+    http_method_names = ['get', 'put', 'delete']
 
 class MageUpdateStatusView(generics.RetrieveUpdateAPIView):
     queryset = Mage.objects.all()
