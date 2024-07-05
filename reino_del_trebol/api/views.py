@@ -19,11 +19,13 @@ class MageCreateView(generics.CreateAPIView):
 class MageUpdateView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Mage.objects.all()
     serializer_class = MageSerializer
+    
 
 class MageUpdateStatusView(generics.RetrieveUpdateAPIView):
     queryset = Mage.objects.all()
     serializer_class = MagePatchSerializer
     lookup_field = 'pk'
+    http_method_names = ['patch']
 
     def patch(self, request, pk, *args, **kwargs):
         try:
