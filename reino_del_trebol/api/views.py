@@ -1,11 +1,9 @@
-from .models import Mage, Grimoire
+from .models import Mage
 from rest_framework import generics, status
 from .serializers import MageSerializer, MagePatchSerializer, GrimoireSerializer
 from rest_framework.response import Response
 from .utils import GrimoireAssigner
-import random
 
-# Create your views here.
 class MageView(generics.RetrieveAPIView):
     queryset = Mage.objects.all()
     serializer_class = MageSerializer
