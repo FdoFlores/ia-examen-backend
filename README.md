@@ -33,3 +33,6 @@
 
 ## Correr el proyecto
     python manage.py runserver
+
+### Pueden revisar el proyecto desplegado en una instancia aws ec2 en:
+http://18.117.255.6:8000
